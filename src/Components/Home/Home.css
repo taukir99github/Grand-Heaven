@@ -1,0 +1,100 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home-image-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.Home-text-content {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.Home-text-content h1 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.Home-text-content p {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+.Home-main {
+  width: 100%;
+  height: 150px;
+}
+.Home-dropdown-section {
+  width: 60%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+.Home-dropdown-section-pt-2 {
+  
+  padding: 16px 19px;
+  color:black;
+  background-color:#fff;
+}
+.dream-home{
+  width: 100%;
+  display: flex;
+ gap: 2rem;
+ padding: 3rem 5rem;
+ margin-left: 1rem;
+  
+}
+.dream-home-image{
+  width: 50%;
+}
+.dream-home-content{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.dream-home-heading h1{
+  font-size: 45px;
+  font-weight: 600;
+}
+.dream-home-lower-content{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.dream-home-lower-content h1{
+  font-size: 22px;
+  font-weight: 600;
+}
+.dream-home-lower-content p{
+  font-size: 16px;
+  font-weight: 400;
+}
+.dream-home-lower{
+  display: flex;
+  gap: 1rem;
+}
+.dream-home-content button{
+  width: 22%;
+  padding: 10px;
+  border-radius: 9px;
+  background: #C92028;
+ color:white;
+}

@@ -1,0 +1,30 @@
+.Properties-card{
+    width: 280px;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0px 0px 17px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   
+
+}
+.Properties-card-content-upper-part{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 8px;
+}
+.Properties-card-content-lower-part{
+    display: flex;
+    gap: 2rem;
+    align-items:center;
+    margin-top: 8px;
+
+}
+.Properties-card-content-lower-part button{
+    padding: 6px 17px;
+    background: brown;
+    border-radius: 5px;
+    color: white;
+}

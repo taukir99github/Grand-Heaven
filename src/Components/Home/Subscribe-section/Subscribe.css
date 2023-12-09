@@ -1,0 +1,46 @@
+.Subscribe-section-pt-1 {
+  width: 60%;
+  padding: 4rem 5rem;
+}
+.Subscribe-section-pt-2 {
+  width: 40%;
+}
+.input-field {
+  display: flex;
+  gap: 1rem;
+  width: 80%;
+  border: 1px solid #5ce1e6;
+  border-radius: 6px;
+  padding: 9px 5px;
+
+  align-items: center;
+  margin-top: 2rem;
+  background: white;
+}
+.input-field input {
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+}
+.message-section {
+  font-size: 26px;
+  color: black;
+  cursor: pointer;
+  font-weight: 300;
+  margin-left: 10px;
+}
+input::placeholder {
+  font-size: 13px;
+  color: black;
+  margin-top: 0.5rem;
+  font-weight: 200;
+}
+.input-field button {
+  background: #c92028;
+  padding: 7px 20px;
+  border-radius: 8px;
+  color: white;
+}

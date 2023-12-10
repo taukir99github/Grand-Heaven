@@ -9,10 +9,10 @@ import Stepper from './Components/ListingPage/Stepper/Stepper'
 const App = () => {
   return (
     <div>
-      {/* <Navbar/>
-      <Home/>
-      <Footer/> */}
-      {/* <Dashboard/> */}
+      <Navbar/>
+      {/* <Home/>
+      <Footer/> 
+    <Dashboard/> */}
       <Stepper/>
      
   

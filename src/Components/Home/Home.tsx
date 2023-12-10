@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 import { GoArrowRight } from "react-icons/go";
-
 import HomeBackground from "../../Images/HomeBackground.png";
 import Property from "../DropdownComponents/Property";
 import NewProperties from "./NewProperties/NewProperties";
@@ -11,7 +10,8 @@ import Properties from "./Our Properties/Properties";
 import HomeLoans from "./HomeLoans/HomeLoans";
 import Faq from "./FAQ/Faq";
 import Subscribe from "./Subscribe-section/Subscribe";
-import { Carousel } from "flowbite-react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import Homeimage from "../../Images/HomeLeft Img.png";
 import vector1 from "../../Images/vectorIcon1.png";
 import vector2 from "../../Images/vectoeIcon2.png";
@@ -29,6 +29,24 @@ const Home: React.FC = () => {
     propertyType: "",
     budget: "",
   });
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 2,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
 
   const [isPropertyDropdownOpen, setIsPropertyDropdownOpen] = useState(false);
   const [isPropertypeDropdownOpen, setIsPropertyTypeDropdownOpen] =
@@ -57,7 +75,7 @@ const Home: React.FC = () => {
   }, [isPropertypeDropdownOpen]);
 
   return (
-    <>
+    <div className="flex flex-col gap-3">
       <div className="home-container overflow-hidden">
         <div className="Home-image-section">
           <img src={HomeBackground} alt="" />
@@ -74,7 +92,7 @@ const Home: React.FC = () => {
             <div className="Home-dropdown-section gap-1 ">
               <div
                 className="Home-dropdown-section-pt-1 gap-3 bg-white text-black py-3 w-1/6 flex justify-center rounded-t-lg font-semibold cursor-pointer"
-                onClick={handleCityClick}
+                
               >
                 <span>Buy</span>
                 <span style={{ color: "#C92028" }}>Rent</span>
@@ -135,15 +153,27 @@ const Home: React.FC = () => {
             <GoArrowRight />
           </div>
         </div>
+        <div className="">
+        <Carousel
+            swipeable={false}
+            draggable={false}
+            showDots={false}
+            responsive={responsive}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            // autoPlay={ true }
+            autoPlaySpeed={1000}
+            customTransition="all .5"
+            transitionDuration={500}
+          >
+            <Properties />
+            <Properties />
+            <Properties />
+            <Properties />
+          </Carousel>
+          </div>
 
-        <div className="flex gap-6 justify-center pb-4">
-          <Properties />
-          <Properties />
-          <Properties />
-          <Properties />
-        </div>
-
-        <div className="flex flex-col px-3">
+        <div className="flex flex-col px-3 ">
           <NewProperties />
         </div>
       </div>
@@ -228,18 +258,19 @@ const Home: React.FC = () => {
               </p>
             </div>
           </div>
-         <button>Learn More</button>
+          <div className="flex justify-start">
+            <button>Learn More</button>
+          </div>
         </div>
-       
       </div>
 
       <div className="pt-16">
-        <Faq/>
+        <Faq />
       </div>
-    <div className="mt-8">
-      <Subscribe/>
+      <div className="mt-8">
+        <Subscribe />
+      </div>
     </div>
-    </>
   );
 };
 

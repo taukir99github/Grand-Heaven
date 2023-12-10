@@ -8,7 +8,9 @@ const Faq: React.FC = () => {
       <div className="faq-section cursor-pointer">
         <div className="faq-section-upper">
           <h1>Frequently Asked Questions</h1>
-          <button>Contact Us</button>
+          <div className="flex items-center">
+          <button className="px-5 py-2">Contact Us</button>
+          </div>
         </div>
         <div className="faq-section-lower">
           <div className="faq-section-lower-pt-1">

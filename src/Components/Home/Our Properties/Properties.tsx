@@ -10,7 +10,7 @@ import Property1 from "../../../Images/Property1.png";
 const Properties: React.FC = () => {
   
   return (
-    <div>
+    <div className="flex justify-center">
       {/* <div className="font-bold text-2xl">Explore Our Properties</div> */}
       
         <div className="Properties-card ">

@@ -3,35 +3,92 @@ import { FaPlus } from "react-icons/fa";
 
 function AdditionalDetails() {
   return (
-    <div className="pl-[300px] flex flex-col gap-5">
+    <div className=" bg-white flex flex-col gap-5 p-8">
       <div>
         <h1 className="font-semibold text-[18px]">
           Provide Details About Your Property
         </h1>
       </div>
-      <div className="cursor-pointer">
-        <h1 className="text-[18px]">Property Picture</h1>
-        <div className="mt-1">
-          <div className="bg-neutral-100 py-24 w-[97%] flex flex-col justify-center items-center">
-            <button className="bg-white p-1 flex m-2 border-2 border-[#232324] rounded-[12px]">
-              <FaPlus className="m-1" />
-              Add Pictures
-            </button>
-            <span className="text-[18px]">Add Minimum 5 Pictures</span>
+      <div className="font-medium text-lg">Property Picture </div>
+      <div className="flex items-center justify-center w-full">
+        
+        <label
+          htmlFor="dropzone-file"
+          className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+        >
+          <div className="flex flex-col items-center justify-center pt-5 pb-6">
+            <svg
+              className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 16"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+              />
+            </svg>
+            <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
+              <span className="font-semibold">Click to upload</span> or drag and
+              drop
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              SVG, PNG, JPG, or GIF (MAX. 800x400px)
+            </p>
+            <div className="py-2 text-sm">Add Minimum 5 pictures</div>
           </div>
-        </div>
+          <input
+            id="dropzone-file"
+            type="file"
+            className="hidden"
+            // onChange={handleFileChange}
+          />
+        </label>
       </div>
-      <div className="my-3 cursor-pointer">
-        <h1 className="text-[18px] ">Property Videos</h1>
-        <div className="mt-1">
-          <div className="bg-neutral-100 py-24 w-[97%] flex flex-col justify-center items-center">
-            <button className="bg-white flex p-1 m-2 border-2 border-[#232324] rounded-[12px]">
-              <FaPlus className="m-1" />
-              Add Pictures
-            </button>
-            <span className="text-[18px]">Add 1 Video</span>
+      <div className="font-medium text-lg">Property Video </div>
+
+      <div className="flex items-center justify-center w-full">
+        <label
+          htmlFor="dropzone-file"
+          className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+        >
+          <div className="flex flex-col items-center justify-center pt-5 pb-6">
+            <svg
+              className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 16"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+              />
+            </svg>
+            <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
+              <span className="font-semibold">Click to upload</span> or drag and
+              drop
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              SVG, PNG, JPG, or GIF (MAX. 800x400px)
+            </p>
+            <div className="text-sm p-2">Add 1 Video</div>
           </div>
-        </div>
+          <input
+            id="dropzone-file"
+            type="file"
+            className="hidden"
+            min={5}
+            // onChange={handleFileChange}
+          />
+        </label>
       </div>
 
       {/* Additional Info */}
@@ -191,24 +248,26 @@ function AdditionalDetails() {
           </div>
         </div>
       </div>
-      
+
       {/* Unit Number  */}
 
       <div className="mt-2">
         <h1 className="text-[18px] ">Unit Number </h1>
         <div className="flex">
           <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-          Unit Number 
+            Unit Number
           </div>
         </div>
       </div>
 
       <div className="flex justify-start gap-2 m-3">
-        <button className="bg-slate-400 rounded-[7px] px-7 text-black p-2">Back</button>
-        <button className="bg-red-700 rounded-[7px] text-white p-2 px-6">Save & Continue</button>
+        <button className="bg-slate-400 rounded-[7px] px-7 text-black p-2">
+          Back
+        </button>
+        <button className=" p-2 px-6 rounded-lg bg-[#C92028] text-white transition ease-in-out delay-150 #C92028 hover:-translate-y-1 hover:scale-110 indigo-500 duration-300 ...">
+          Save & Continue
+        </button>
       </div>
-
-
     </div>
   );
 }

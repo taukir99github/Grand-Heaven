@@ -1,6 +1,6 @@
 import React from "react";
-import Stepper from "../../../ListingPage/Stepper/Stepper";
-import PropertyDetails from "../../../ListingPage/PropertyDetails/PropertyDetails";
+import Stepper from "../../../PostProperty/Stepper/Stepper";
+import PropertyDetails from "../../../PostProperty/PropertyDetails/PropertyDetails";
 
 function MyListing() {
   return (

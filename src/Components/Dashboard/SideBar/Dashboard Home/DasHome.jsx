@@ -6,10 +6,9 @@ import Property from "../../../../Images/DashboardProperty.png";
 import Listings from "../../../../Images/DashboardListings.png";
 import Rent from "../../../../Images/DashboardRent.png";
 import Logout from "../../../../Images/Logout.png";
-import Stepper from "../../../ListingPage/Stepper/Stepper";
-import MyListing from "./MyListing";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
+import AdditionalDetails from "../../../Post Property/Additional Details/AdditionalDetails";
 
 function Home() {
   const sidebarMenu = [
@@ -35,7 +34,7 @@ function Home() {
       id: 4,
       path: "",
       image: Listings,
-      text: "My Listings",
+      text: "Post Propertys",
     },
     {
       id: 5,
@@ -61,14 +60,18 @@ function Home() {
     <div className="bg-gray-100 flex gap-10 justify-center pt-8 px-7">
       <div className="cursor-pointer bg-white flex flex-col gap-6 p-3">
         {sideMenu ? (
-          <RxCross2 onClick={() => setSideMenu(false)} className="text-[30px]"/>
-          ) : (
-          <IoMenu onClick={() => setSideMenu(true)} className="text-[30px]"/>
+          <RxCross2
+            onClick={() => setSideMenu(false)}
+            className="text-[30px]"
+          />
+        ) : (
+          <IoMenu onClick={() => setSideMenu(true)} className="text-[30px]" />
         )}
         {sideMenu && sidebarMenu.map((item) => <SideBar item={item} />)}
       </div>
       <div className="w-[100%]">
-        <MyListing />
+        {/* <MyListing /> */}
+        <AdditionalDetails />
       </div>
     </div>
   );

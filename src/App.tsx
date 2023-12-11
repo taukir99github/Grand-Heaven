@@ -1,24 +1,22 @@
-import React from 'react'
-import Navbar from './Components/Navbar/Navbar'
-import Home from './Components/Home/Home'
-import Footer from './Components/Footer/Footer'
-import Dashboard from './Components/Dashboard/Dashboard'
-import Stepper from './Components/ListingPage/Stepper/Stepper'
-
+import React from "react";
+import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
+import Stepper from "./Components/ListingPage/Stepper/Stepper";
+import ListingPage from "./Components/ListingPage/ListingPage";
+import Home from "./Components/Dashboard/SideBar/Dashboard Home/DasHome";
 
 const App = () => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       {/* <Home/>
-      <Footer/> 
-    <Dashboard/> */}
-      <Stepper/>
-     
-  
-     
+      <Footer/>  */}
+      {/* <ListingPage/> */}
+      {/* <Dashboard/> */}
+      {/* <Stepper/> */}
+      <Home />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

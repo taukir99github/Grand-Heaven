@@ -16,7 +16,7 @@ const Navbar = () => {
           <div>Agents</div>
           <div>About Us</div>
         </div>
-        <div className="nav-pt-3 flex gap-8">
+        <div className="nav-pt-3 flex gap-8 ">
           <button style={{ color: "#C92028" }}>LogIn</button>
           <button className="signup">SignUp</button>
         </div>

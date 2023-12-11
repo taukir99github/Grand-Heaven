@@ -75,7 +75,7 @@ const Home: React.FC = () => {
   }, [isPropertypeDropdownOpen]);
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-5">
       <div className="home-container overflow-hidden">
         <div className="Home-image-section">
           <img src={HomeBackground} alt="" />

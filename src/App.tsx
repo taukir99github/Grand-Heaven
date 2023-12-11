@@ -4,6 +4,7 @@ import Home from './Components/Home/Home'
 import Footer from './Components/Footer/Footer'
 import Dashboard from './Components/Dashboard/Dashboard'
 import Stepper from './Components/ListingPage/Stepper/Stepper'
+import AdditionalDetails from './Components/ListingPage/AdditionalDetails'
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Footer/> 
     <Dashboard/> */}
       <Stepper/>
+      <AdditionalDetails/>
      
   
      

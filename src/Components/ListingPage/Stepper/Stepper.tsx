@@ -25,7 +25,7 @@ const Stepper = () => {
       </div>
       {/* after stepper componenet */}
 
-      <div className="pl-8 flex flex-col gap-5">
+      {/* <div className="pl-8 flex flex-col gap-5">
         <div>
           <h1 className="font-semibold text-[20px]">
             Provide Details About Your Property
@@ -48,7 +48,7 @@ const Stepper = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,12 +1,10 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
 import DashHome from "./Components/Dashboard/Dashboard Home/DasHome";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  BrowserRouter,
   Navigate,
 } from "react-router-dom";
 import AdditionalDetails from "./Components/Dashboard/PostProperty/Additional Details/AdditionalDetails";

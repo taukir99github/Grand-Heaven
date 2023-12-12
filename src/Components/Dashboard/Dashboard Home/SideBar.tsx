@@ -67,7 +67,7 @@ const SideBar: React.FC = () => {
       {sideMenu &&
         sidebarMenu.map((item, index) => (
           <Link to={item.path} key={index}>
-            <div className="w-[200px] m-1 flex gap-5 p-2 box ">
+            <div className="w-[200px] m-1 flex gap-5 p-2 box hover:shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 rounded-lg duration-300 ...">
               <div>
                 <img src={item.image} alt="" />
               </div>

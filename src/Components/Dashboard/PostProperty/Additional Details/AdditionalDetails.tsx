@@ -1,7 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 
 function AdditionalDetails() {
+  interface AdditionalDetailsType {
+    AdditionalRoom: string;
+    PossesionStatus: string;
+    FurnishingStatus: string;
+    AgeOfProperty: string;
+    NumberofBathroom: string;
+    CoveredParking: string;
+    UncoveredParking: string;
+    Balcony:string;
+    PowerBackUp:string;
+    Facing:string;
+    Flooring:string;
+    FloorNumber:string;
+    TowerBlock:string;
+    TowerFloorCount:string;
+    UnitNumber:string;
+  }
+  const [AdditionalDetails, setAdditionalDetails] = useState<AdditionalDetailsType>({
+    AdditionalRoom: "",
+    PossesionStatus: "",
+    FurnishingStatus: "",
+    AgeOfProperty: "",
+    NumberofBathroom: "",
+    CoveredParking: "",
+    UncoveredParking: "",
+    Balcony:"",
+    PowerBackUp:"",
+    Facing:"",
+    Flooring:"",
+    FloorNumber:"",
+    TowerBlock:"",
+    TowerFloorCount:"",
+    UnitNumber:"",
+  });
+  
   return (
     <div className=" bg-white flex flex-col gap-5 p-8">
       <div>
@@ -91,121 +126,316 @@ function AdditionalDetails() {
       </div>
 
       {/* Additional Info */}
-      <div className="mt-2">
-        <h1 className="text-[18px] ">Additional Room</h1>
-        <div className="flex">
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300 ">
-            Pooja Room
-          </div>
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Pooja Room
-          </div>
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Pooja Room
-          </div>
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Pooja Room
+      <div>
+        <div className="pl-8 flex flex-col gap-7 p-6">
+        <div className="flex flex-col gap-5">
+          <span className="font-semibold text-[16px]">
+          Additional Room
+          </span>
+          <div className="flex gap-4 text-center ">
+            {["Pooja Room", "Servent Room"  , "Study Room" , "Extra Room"].map((item) => (
+              <div
+                key={item}
+                onClick={() =>
+                  setAdditionalDetails((prev) => {
+                    console.log(prev);
+                    return { ...prev, AdditionalRoom: item };
+                  })
+                }
+                className={`flex p-2 px-6 border-2 ${
+                  item === AdditionalDetails.AdditionalRoom
+                    ? "bg-black text-white"
+                    : ""
+                } rounded-md gap-3 cursor-pointer`}
+              >
+               
+                <div>{item}</div>
+              </div>
+            ))}
           </div>
         </div>
+        </div>
       </div>
+     
 
       {/* Possesion Status */}
-      <div className="mt-2">
-        <h1 className="text-[18px] ">Possesion Status</h1>
-        <div className="flex">
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Ready To Move
+      <div>
+        <div className="pl-8 flex flex-col gap-7 p-6">
+        <div className="flex flex-col gap-5">
+          <span className="font-semibold text-[16px]">
+          Possesion Status 
+          </span>
+          <div className="flex gap-4 text-center ">
+            {["Ready To Move", "Under Construction"].map((item) => (
+              <div
+                key={item}
+                onClick={() =>
+                  setAdditionalDetails((prev) => {
+                    console.log(prev);
+                    return { ...prev, PossesionStatus: item };
+                  })
+                }
+                className={`flex p-2 px-6 border-2 ${
+                  item === AdditionalDetails.PossesionStatus
+                    ? "bg-black text-white"
+                    : ""
+                } rounded-md gap-3 cursor-pointer`}
+              >
+               
+                <div>{item}</div>
+              </div>
+            ))}
           </div>
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Under Construction
-          </div>
+        </div>
         </div>
       </div>
 
       {/* Furnishing Status */}
-      <div className="mt-2">
-        <h1 className="text-[18px] ">Furnishing Status</h1>
-        <div className="flex">
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Furnished
+      <div>
+        <div className="pl-8 flex flex-col gap-7 p-6">
+        <div className="flex flex-col gap-5">
+          <span className="font-semibold text-[16px]">
+          Furnishing Status 
+          </span>
+          <div className="flex gap-4 text-center ">
+            {["Furnished", "Semi-Furnished" , "UnFurnished"].map((item) => (
+              <div
+                key={item}
+                onClick={() =>
+                  setAdditionalDetails((prev) => {
+                    console.log(prev);
+                    return { ...prev, FurnishingStatus: item };
+                  })
+                }
+                className={`flex p-2 px-6 border-2 ${
+                  item === AdditionalDetails.FurnishingStatus
+                    ? "bg-black text-white"
+                    : ""
+                } rounded-md gap-3 cursor-pointer`}
+              >
+               
+                <div>{item}</div>
+              </div>
+            ))}
           </div>
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Semi-furnished
-          </div>
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Unfurnished
-          </div>
+        </div>
         </div>
       </div>
 
       {/* Age Of Property */}
-      <div className="mt-2">
-        <h1 className="text-[18px] ">Age Of Property(Years)</h1>
-        <div className="flex">
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Enter Year
+      <div>
+        <div className="pl-8 flex flex-col gap-7 p-6">
+        <div className="flex flex-col gap-5">
+          <span className="font-semibold text-[16px]">
+          Age Of Property (Years) 
+          </span>
+          <div className="flex gap-4 text-center ">
+            {["0-1", "2-4" , "5-8" , "10+"].map((item) => (
+              <div
+                key={item}
+                onClick={() =>
+                  setAdditionalDetails((prev) => {
+                    console.log(prev);
+                    return { ...prev, AgeOfProperty: item };
+                  })
+                }
+                className={`flex p-2 px-6 border-2 ${
+                  item === AdditionalDetails.AgeOfProperty
+                    ? "bg-black text-white"
+                    : ""
+                } rounded-md gap-3 cursor-pointer`}
+              >
+               
+                <div>{item}</div>
+              </div>
+            ))}
           </div>
+        </div>
         </div>
       </div>
 
       {/* Number of Bathroom */}
-      <div className="mt-2">
-        <h1 className="text-[18px] ">Number of Bathroom</h1>
-        <div className="flex">
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Enter Number
+      <div>
+        <div className="pl-8 flex flex-col gap-7 p-6">
+        <div className="flex flex-col gap-5">
+          <span className="font-semibold text-[16px]">
+          Number of Bathroom
+          </span>
+          <div className="flex gap-4 text-center ">
+            {["1", "2" , "3" , "4+"].map((item) => (
+              <div
+                key={item}
+                onClick={() =>
+                  setAdditionalDetails((prev) => {
+                    console.log(prev);
+                    return { ...prev, NumberofBathroom: item };
+                  })
+                }
+                className={`flex p-2 px-6 border-2 ${
+                  item === AdditionalDetails.NumberofBathroom
+                    ? "bg-black text-white"
+                    : ""
+                } rounded-md gap-3 cursor-pointer`}
+              >
+               
+                <div>{item}</div>
+              </div>
+            ))}
           </div>
+        </div>
         </div>
       </div>
 
       {/* Covered Parking */}
-      <div className="mt-2">
-        <h1 className="text-[18px] ">Covered Parking</h1>
-        <div className="flex">
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Covered Parking
+      <div>
+        <div className="pl-8 flex flex-col gap-7 p-6">
+        <div className="flex flex-col gap-5">
+          <span className="font-semibold text-[16px]">
+          Covered Parking
+          </span>
+          <div className="flex gap-4 text-center ">
+            {["1", "2" , "3" , "4+"].map((item) => (
+              <div
+                key={item}
+                onClick={() =>
+                  setAdditionalDetails((prev) => {
+                    console.log(prev);
+                    return { ...prev, CoveredParking: item };
+                  })
+                }
+                className={`flex p-2 px-6 border-2 ${
+                  item === AdditionalDetails.CoveredParking
+                    ? "bg-black text-white"
+                    : ""
+                } rounded-md gap-3 cursor-pointer`}
+              >
+               
+                <div>{item}</div>
+              </div>
+            ))}
           </div>
+        </div>
         </div>
       </div>
 
       {/* Uncovered Parking */}
-      <div className="mt-2">
-        <h1 className="text-[18px] ">Uncovered Parking</h1>
-        <div className="flex">
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Uncovered Parking
+      <div>
+        <div className="pl-8 flex flex-col gap-7 p-6">
+        <div className="flex flex-col gap-5">
+          <span className="font-semibold text-[16px]">
+          Open/UnCovered Parking
+          </span>
+          <div className="flex gap-4 text-center ">
+            {["NA", "2" , "3" , "4" , "5"].map((item) => (
+              <div
+                key={item}
+                onClick={() =>
+                  setAdditionalDetails((prev) => {
+                    console.log(prev);
+                    return { ...prev, UncoveredParking: item };
+                  })
+                }
+                className={`flex p-2 px-6 border-2 ${
+                  item === AdditionalDetails.UncoveredParking
+                    ? "bg-black text-white"
+                    : ""
+                } rounded-md gap-3 cursor-pointer`}
+              >
+               
+                <div>{item}</div>
+              </div>
+            ))}
           </div>
+        </div>
         </div>
       </div>
 
       {/* Balcony */}
-      <div className="mt-2">
-        <h1 className="text-[18px] ">Balcony</h1>
-        <div className="flex">
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Balcony
+      <div>
+        <div className="pl-8 flex flex-col gap-7 p-6">
+        <div className="flex flex-col gap-5">
+          <span className="font-semibold text-[16px]">
+          Balcony
+          </span>
+          <div className="flex gap-4 text-center ">
+            {["Connected", "Individual" , "Room-Attached"].map((item) => (
+              <div
+                key={item}
+                onClick={() =>
+                  setAdditionalDetails((prev) => {
+                    console.log(prev);
+                    return { ...prev, Balcony: item };
+                  })
+                }
+                className={`flex p-2 px-6 border-2 ${
+                  item === AdditionalDetails.Balcony
+                    ? "bg-black text-white"
+                    : ""
+                } rounded-md gap-3 cursor-pointer`}
+              >
+               
+                <div>{item}</div>
+              </div>
+            ))}
           </div>
+        </div>
         </div>
       </div>
 
       {/* Power Back Up */}
-      <div className="mt-2">
-        <h1 className="text-[18px] ">Power Back Up</h1>
-        <div className="flex">
-          <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
-            Power Back Up
+      <div>
+        <div className="pl-8 flex flex-col gap-7 p-6">
+        <div className="flex flex-col gap-5">
+          <span className="font-semibold text-[16px]">
+          Power BackUp
+          </span>
+          <div className="flex gap-4 text-center ">
+            {["No Backup", "Available"].map((item) => (
+              <div
+                key={item}
+                onClick={() =>
+                  setAdditionalDetails((prev) => {
+                    console.log(prev);
+                    return { ...prev, PowerBackUp: item };
+                  })
+                }
+                className={`flex p-2 px-6 border-2 ${
+                  item === AdditionalDetails.PowerBackUp
+                    ? "bg-black text-white"
+                    : ""
+                } rounded-md gap-3 cursor-pointer`}
+              >
+               
+                <div>{item}</div>
+              </div>
+            ))}
           </div>
         </div>
+        </div>
       </div>
-
       {/* Facing */}
-      <div className="mt-2">
+      {/* <div className="mt-2">
         <h1 className="text-[18px] ">Facing</h1>
         <div className="flex">
           <div className="border-2 m-1 border-[#232324] rounded-[12px] px-5 py-[3px] text-sm text-gray-300">
             Facing
           </div>
         </div>
+      </div> */}
+      <div>
+        <div>
+      <label>Facing:</label> 
+      </div>
+      <div>
+    <select name="Facing"> 
+        <option value="rigatoni">Rigatoni</option> 
+        <option value="dave">Dave</option> 
+        <option value="pumpernickel">Pumpernickel</option> 
+        <option value="reeses">Reeses</option> 
+    </select>
+    </div>
+  
+
       </div>
 
       {/* Flooring */}

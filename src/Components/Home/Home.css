@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
 }
-.Home-image-section img{
+.Home-image-section img {
   height: 90vh;
   width: 100%;
 }
@@ -51,51 +51,49 @@
   justify-content: center;
 }
 .Home-dropdown-section-pt-2 {
-  
   padding: 16px 19px;
-  color:black;
-  background-color:#fff;
+  color: black;
+  background-color: #fff;
 }
-.dream-home{
+.dream-home {
   width: 100%;
   display: flex;
- gap: 2rem;
- padding: 3rem 5rem 3rem 7rem;
-  
+  gap: 2rem;
+  padding: 3rem 5rem 3rem 7rem;
 }
-.dream-home-image{
+.dream-home-image {
   width: 50%;
 }
-.dream-home-content{
+.dream-home-content {
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
-.dream-home-heading h1{
+.dream-home-heading h1 {
   font-size: 45px;
   font-weight: 600;
 }
-.dream-home-lower-content{
+.dream-home-lower-content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.dream-home-lower-content h1{
+.dream-home-lower-content h1 {
   font-size: 22px;
   font-weight: 600;
 }
-.dream-home-lower-content p{
+.dream-home-lower-content p {
   font-size: 16px;
   font-weight: 400;
 }
-.dream-home-lower{
+.dream-home-lower {
   display: flex;
   gap: 1rem;
 }
-.dream-home-content button{
+.dream-home-content button {
   padding: 10px 14px;
   border-radius: 9px;
-  background: #C92028;
- color:white;
+  background: #c92028;
+  color: white;
 }

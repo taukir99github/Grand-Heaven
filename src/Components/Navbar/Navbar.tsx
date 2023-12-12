@@ -12,16 +12,16 @@ const Navbar = () => {
         </div>
 
         <div className="nav-pt-2 ">
-          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-red-500 duration-300 ...">
+          <div className="transition ease-in-out delay-250 hover:-translate-y-2 hover:scale-110 hover:text-red-500 duration-300 ...">
             Home
           </div>
-          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-red-500 duration-300 ...">
+          <div className="transition ease-in-out delay-250 hover:-translate-y-2 hover:scale-110 hover:text-red-500 duration-300 ...">
             Properties
           </div>
-          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-red-500 duration-300 ...">
+          <div className="transition ease-in-out delay-250 hover:-translate-y-2 hover:scale-110 hover:text-red-500 duration-300 ...">
             Agents
           </div>
-          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-red-500 duration-300 ...">
+          <div className="transition ease-in-out delay-250 hover:-translate-y-2 hover:scale-110 hover:text-red-500 duration-300 ...">
             About Us
           </div>
         </div>

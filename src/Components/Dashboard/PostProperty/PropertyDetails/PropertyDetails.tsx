@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { GrHomeRounded } from "react-icons/gr";
 import Rent from "../../../../Images/Rent.png";
 import Sale from "../../../../Images/Sale.png";
@@ -27,9 +27,6 @@ const PropertyDetails = () => {
     price: "",
   });
 
-  useEffect(() => {
-    console.log(propertyDetails);
-  }, [propertyDetails]);
   return (
     <div>
       <div className="pl-8 flex flex-col gap-7 p-6">

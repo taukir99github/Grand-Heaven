@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import SideBar from "../SideBar";
-import Profile from "../../../../Images/DashboardProfile.png";
-import Activity from "../../../../Images/DashboardActivity.png";
-import Property from "../../../../Images/DashboardProperty.png";
-import Listings from "../../../../Images/DashboardListings.png";
-import Rent from "../../../../Images/DashboardRent.png";
-import Logout from "../../../../Images/Logout.png";
+import SideBar from "./SideBar";
+import Profile from "../../../Images/DashboardProfile.png";
+import Activity from "../../../Images/DashboardActivity.png";
+import Property from "../../../Images/DashboardProperty.png";
+import Listings from "../../../Images/DashboardListings.png";
+import Rent from "../../../Images/DashboardRent.png";
+import Logout from "../../../Images/Logout.png";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
-import AdditionalDetails from "../../../Post Property/Additional Details/AdditionalDetails";
+import MyListing from "./MyListing";
 
 function Home() {
   const sidebarMenu = [
@@ -28,13 +28,13 @@ function Home() {
       id: 3,
       path: "",
       image: Property,
-      text: "Post Property",
+      text: "PostProperty",
     },
     {
       id: 4,
       path: "",
       image: Listings,
-      text: "Post Propertys",
+      text: "PostPropertys",
     },
     {
       id: 5,
@@ -69,9 +69,8 @@ function Home() {
         )}
         {sideMenu && sidebarMenu.map((item) => <SideBar item={item} />)}
       </div>
-      <div className="w-[100%]">
-        {/* <MyListing /> */}
-        <AdditionalDetails />
+      <div className="w-[100%] bg-white">
+        <MyListing />
       </div>
     </div>
   );

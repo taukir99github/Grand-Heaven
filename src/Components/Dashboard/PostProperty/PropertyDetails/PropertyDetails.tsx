@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { GrHomeRounded } from "react-icons/gr";
-import Rent from "../../../Images/Rent.png";
-import Sale from "../../../Images/Sale.png";
-
-import Residential_icon from "../../../Images/Home.png";
-import Commercial from "../../../Images/Commercial.png";
-import Residential from "../../../Images/Residential.png";
+import Rent from "../../../../Images/Rent.png";
+import Sale from "../../../../Images/Sale.png";
+import Residential_icon from "../../../../Images/Home.png";
+import Commercial from "../../../../Images/Commercial.png";
+import Residential from "../../../../Images/Residential.png";
 
 const PropertyDetails = () => {
   interface propertyDetailsType {

@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import DashHome from "./Components/Dashboard/Dashboard Home/DasHome";
 import {
@@ -16,8 +15,6 @@ const App = () => {
   return (
     <div>
       <Navbar />
-
-      {/* Dashboard  */}
 
       <Router>
         <Routes>

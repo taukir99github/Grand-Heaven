@@ -30,8 +30,7 @@ const Stepper = () => {
             <Step
               key={index}
               label={step.label}
-              onClick={() => 
-                navigate(step.path)}
+              onClick={() => navigate(step.path)}
             >
               {step.icon}
             </Step>

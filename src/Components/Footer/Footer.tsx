@@ -7,8 +7,8 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 const Footer:React.FC = () => {
   return (
-    <div className='pt-24 cursor-pointer'>
-     <div className='flex justify-between px-8 cursor-pointer mt-20'>
+    <div className=' pt-8 cursor-pointer'>
+     <div className='flex justify-between px-8 cursor-pointer'>
         <div className='flex flex-col gap-2'>
             <img src={footerimg} alt="" />
             <span className='font-light text-[16px]'>Crafting Seamless Real Estate <br />Experiences</span>
@@ -32,11 +32,11 @@ const Footer:React.FC = () => {
             <p className='font-light text-[16px]'>Twitter Support</p>
         </div>
      </div>
-     <div className='flex gap-7 text-xl pl-7'>
-        <div><FaInstagram/></div>
-        <div><FaFacebookF/></div>
-        <div><IoLogoTwitter/></div>
-        <div><FaLinkedinIn/></div>
+     <div className='flex gap-7 text-xl pl-7 '>
+        <div className='transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-110 duration-300 ...'><FaInstagram/></div>
+        <div  className='transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-110 duration-300 ...'><FaFacebookF/></div>
+        <div  className='transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-110 duration-300 ...'><IoLogoTwitter/></div>
+        <div  className='transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-110 duration-300 ...'><FaLinkedinIn/></div>
      </div>
      <div className='mt-10'><hr /></div>
      <div>

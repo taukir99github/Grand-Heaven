@@ -10,6 +10,8 @@ import AdditionalDetails from "./Components/Dashboard/PostProperty/Additional De
 import Aminities from "./Components/Dashboard/PostProperty/Aminities/Aminities";
 import PropertyDetails from "./Components/Dashboard/PostProperty/PropertyDetails/PropertyDetails";
 import PostProperty from "./Components/Dashboard/Dashboard Home/Sidebar Components/PostProperty";
+import Home from "./Components/Home/Home";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -18,6 +20,7 @@ const App = () => {
 
       <Router>
         <Routes>
+          <Route path="/" element={<Home/>}/>
           <Route path="/dashboard" element={<DashHome />}>
             <Route path="post-property" element={<PostProperty />}>
               <Route path="property-details" element={<PropertyDetails />} />
@@ -35,6 +38,7 @@ const App = () => {
           </Route>
         </Routes>
       </Router>
+      <Footer/>
     </div>
   );
 };

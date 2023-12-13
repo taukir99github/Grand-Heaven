@@ -136,7 +136,7 @@ const Home: React.FC = () => {
                   )}
                 </div>
                 <div>
-                  <button className="py-2 px-3 bg-red-500 text-white rounded-md font-normal">
+                  <button className="py-2 px-3 bg-red-500 text-white rounded-md font-normal transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 ...">
                     Get Started
                   </button>
                 </div>
@@ -214,7 +214,7 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className="dream-home">
+      <div className="dream-home sm">
         <div className="dream-home-image">
           <img src={Homeimage} alt="" />
         </div>
@@ -259,7 +259,7 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className="flex justify-start">
-            <button>Learn More</button>
+            <button className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 ...">Learn More</button>
           </div>
         </div>
       </div>

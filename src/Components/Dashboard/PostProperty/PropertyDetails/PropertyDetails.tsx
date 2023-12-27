@@ -1,23 +1,27 @@
-import React, { useState } from "react";
-import { GrHomeRounded } from "react-icons/gr";
+import { useState } from "react";
+
 import Rent from "../../../../Images/Rent.png";
 import Sale from "../../../../Images/Sale.png";
 import Residential_icon from "../../../../Images/Home.png";
 import Commercial from "../../../../Images/Commercial.png";
-import Residential from "../../../../Images/Residential.png";
+
+
+interface PropertyDetailsType {
+  listingFor: string;
+  buildingType: string;
+  propertyType: string;
+  city: string;
+  project: string;
+  locality: string;
+  price: string;
+}
+
+
 
 const PropertyDetails = () => {
-  interface propertyDetailsType {
-    listingFor: string;
-    buildingType: string;
-    propertyType: string;
-    city: string;
-    project: string;
-    locality: string;
-    price: string;
-  }
+ 
 
-  const [propertyDetails, setPropertyDetails] = useState<propertyDetailsType>({
+  const [propertyDetails, setPropertyDetails] = useState<PropertyDetailsType>({
     listingFor: "",
     buildingType: "",
     propertyType: "",
@@ -26,6 +30,7 @@ const PropertyDetails = () => {
     locality: "",
     price: "",
   });
+
 
   return (
     <div>

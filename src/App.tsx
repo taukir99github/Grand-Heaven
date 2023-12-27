@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import DashHome from "./Components/Dashboard/Dashboard Home/DasHome";
+import LoginSignup from "./Components/LogIn/LoginSignup";
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,7 +14,7 @@ import PropertyDetails from "./Components/Dashboard/PostProperty/PropertyDetails
 import PostProperty from "./Components/Dashboard/Dashboard Home/Sidebar Components/PostProperty";
 import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
-
+import PropertyDetailsPage from "./Components/PropertyDetailsPage/PropertyDetailsPage";
 const App = () => {
   return (
     <div>
@@ -21,27 +22,20 @@ const App = () => {
 
       {/* Dashboard  */}
 
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/dashboard" element={<DashHome />}>
-            <Route path="post-property" element={<PostProperty />}>
-              <Route path="property-details" element={<PropertyDetails />} />
-              <Route
-                path="additional-details"
-                element={<AdditionalDetails />}
-              />
-              <Route path="aminities" element={<Aminities />} />
-              <Route
-                index
-                element={<Navigate to="property-details" replace />}
-              />
-            </Route>
-            
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<DashHome />}>
+          <Route path="post-property" element={<PostProperty />}>
+            <Route path="property-details" element={<PropertyDetails />} />
+            <Route path="additional-details" element={<AdditionalDetails />} />
+            <Route path="aminities" element={<Aminities />} />
+            <Route index element={<Navigate to="property-details" replace />} />
           </Route>
-        </Routes>
-      </Router>
-      <Footer/>
+        </Route>
+        <Route path="LogInSignUp" element={<LoginSignup />} />
+        <Route path="PropertyDetailsPage" element={<PropertyDetailsPage />} />
+      </Routes>
+      <Footer />
     </div>
   );
 };

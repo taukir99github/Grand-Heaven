@@ -34,17 +34,17 @@ const Home: React.FC = () => {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 4,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 3,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 2,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1,
     },
   };
 
@@ -90,10 +90,7 @@ const Home: React.FC = () => {
           {/* Home-dropdown-section */}
           <div className="Home-main">
             <div className="Home-dropdown-section gap-1 ">
-              <div
-                className="Home-dropdown-section-pt-1 gap-3 bg-white text-black py-3 w-1/6 flex justify-center rounded-t-lg font-semibold cursor-pointer"
-                
-              >
+              <div className="Home-dropdown-section-pt-1 gap-3 bg-white text-black py-3 w-1/6 flex justify-center rounded-t-lg font-semibold cursor-pointer">
                 <span>Buy</span>
                 <span style={{ color: "#C92028" }}>Rent</span>
               </div>
@@ -154,16 +151,16 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="">
-        <Carousel
+          <Carousel
             swipeable={false}
             draggable={false}
-            showDots={false}
+            showDots={true}
             responsive={responsive}
             ssr={true} // means to render carousel on server-side.
             infinite={true}
-            // autoPlay={ true }
-            autoPlaySpeed={1000}
-            customTransition="all .5"
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            customTransition="transform 2000ms ease-in-out"
             transitionDuration={500}
           >
             <Properties />
@@ -171,7 +168,7 @@ const Home: React.FC = () => {
             <Properties />
             <Properties />
           </Carousel>
-          </div>
+        </div>
 
         <div className="flex flex-col px-3 ">
           <NewProperties />
@@ -184,7 +181,7 @@ const Home: React.FC = () => {
           </h1>
           <p>In-House Services</p>
         </div>
-        <div className="flex flex-wrap gap-3 justify-center pb-5">
+        <div className="flex flex-wrap gap-3 justify-center pb-5 p-4">
           <HomeLoans />
           <HomeLoans />
           <HomeLoans />
@@ -259,7 +256,9 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className="flex justify-start">
-            <button className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 ...">Learn More</button>
+            <button className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 ...">
+              Learn More
+            </button>
           </div>
         </div>
       </div>

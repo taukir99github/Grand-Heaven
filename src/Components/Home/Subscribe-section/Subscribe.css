@@ -5,7 +5,7 @@
 .Subscribe-section-pt-2 {
   width: 40%;
 }
-.input-field {
+.input-field-sub {
   display: flex;
   gap: 1rem;
   width: 80%;
@@ -17,7 +17,7 @@
   margin-top: 2rem;
   background: white;
 }
-.input-field input {
+.input-field-sub input {
   outline: none;
   border: none;
   background: transparent;
@@ -37,7 +37,7 @@ input::placeholder {
   margin-top: 0.5rem;
   font-weight: 200;
 }
-.input-field button {
+.input-field-sub button {
   background: #c92028;
   padding: 7px 20px;
   border-radius: 8px;

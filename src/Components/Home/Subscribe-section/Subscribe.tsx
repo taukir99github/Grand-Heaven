@@ -16,10 +16,10 @@ const Subscribe: React.FC = () => {
             expert advice!
           </span>
           </div>
-          <div className="input-field">
+          <div className="input-field-sub">
             <MdOutlineMessage className="message-section"/>
             <input type="text" placeholder="Enter your Email Address" />
-            <button  >Subscribe</button>
+            <button>Subscribe</button>
           </div>
         </div>
         <div className="Subscribe-section-pt-2">

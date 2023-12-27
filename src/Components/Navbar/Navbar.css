@@ -21,13 +21,13 @@ nav {
   align-items: center;
   text-align: center;
   color: #060606;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
 }
 
 .signup {
   border-radius: 8px;
-  padding: 6px 14px;
+  padding: 8px 22px;
   background: #c92028;
   color: white;
 }

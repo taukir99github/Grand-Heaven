@@ -58,7 +58,7 @@ const SideBar: React.FC = () => {
   const [sideMenu, setSideMenu] = useState(false);
 
   return (
-    <div className="cursor-pointer bg-white flex flex-col gap-6 p-3 h-max">
+    <div className="cursor-pointer bg-white flex flex-col gap-6 p-3 h-max rounded-lg">
       {sideMenu ? (
         <RxCross2 onClick={() => setSideMenu(false)} className="text-[30px]" />
       ) : (

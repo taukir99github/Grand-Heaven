@@ -1,80 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Faq.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Faq: React.FC = () => {
-  return (
-    <>
-      <div className="faq-section cursor-pointer">
-        <div className="faq-section-upper">
-          <h1>Frequently Asked Questions</h1>
-          <div className="flex items-center">
-          <button className="px-5 py-2">Contact Us</button>
-          </div>
-        </div>
-        <div className="faq-section-lower">
-          <div className="faq-section-lower-pt-1">
-            <div className="flex gap-16 items-center">
-              <div className="faq-section-lower-pt-1-content flex gap-2">
-                <span className="font-bold">01</span>
-                <p>How to Begin Buying a Home?</p>
-              </div>
-              <div className="faq-section-lower-pt-1-icons">
-                <FaArrowRightLong />
-              </div>
-            </div>
-            <div className="flex gap-16 items-center">
-              <div className="faq-section-lower-pt-1-content flex gap-2">
-                <span className="font-bold">02</span>
-                <p>Picking the Perfect Neighborhood</p>
-              </div>
-              <div className="faq-section-lower-pt-1-icons">
-                <FaArrowRightLong />
-              </div>
-            </div>
-            <div className="flex gap-16 items-center">
-              <div className="faq-section-lower-pt-1-content flex gap-2">
-                <span className="font-bold">03</span>
-                <p>Pre-Qualification vs. Pre-Approva</p>
-              </div>
-              <div className="faq-section-lower-pt-1-icons">
-                <FaArrowRightLong />
-              </div>
-            </div>
-          </div>
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-          <div className="faq-section-lower-pt-2">
-            <div className="flex gap-16 items-center">
-              <div className="faq-section-lower-pt-1-content flex gap-2">
-                <span className="font-bold">04</span>
-                <p>Renting a Property: The Process</p>
-              </div>
-              <div className="faq-section-lower-pt-1-icons">
-                <FaArrowRightLong />
-              </div>
-            </div>
-            <div className="flex gap-16 items-center">
-              <div className="faq-section-lower-pt-1-content flex gap-2">
-                <span className="font-bold">05</span>
-                <p>Understanding Closing Costs</p>
-              </div>
-              <div className="faq-section-lower-pt-1-icons">
-                <FaArrowRightLong />
-              </div>
-            </div>
-            <div className="flex gap-16 items-center">
-              <div className="faq-section-lower-pt-1-content flex gap-2">
-                <span className="font-bold">06</span>
-                <p>Assessing Home Value</p>
-              </div>
-              <div className="faq-section-lower-pt-1-icons">
-                <FaArrowRightLong />
-              </div>
-            </div>
-          </div>
+  const questions = [
+    "How to Begin Buying a Home?",
+    "Picking the Perfect Neighborhood",
+    "Pre-Qualification vs. Pre-Approval",
+    "Renting a Property: The Process",
+    "Understanding Closing Costs",
+    "Assessing Home Value",
+  ];
+
+  const answers = [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet convallis feugiat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet convallis feugiat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet convallis feugiat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet convallis feugiat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet convallis feugiat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet convallis feugiat.",
+  ];
+
+  const handleAccordionClick = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const splitQuestions = (arr: string[], start: number, end: number) => {
+    return arr.slice(start, end).map((question, index) => (
+      <div key={index}>
+        <div
+          className={`faq-section-lower-pt-1-content flex gap-2 items-center ${
+            activeIndex === index + start ? "active" : ""
+          }`}
+          onClick={() => handleAccordionClick(index + start)}
+        >
+          <span className="font-bold">{index + start + 1}</span>
+          <p>{question}</p>
+          <FaArrowRightLong />
+        </div>
+        {activeIndex === index + start && (
+          <div className="faq-answer">{answers[index + start]}</div>
+        )}
+      </div>
+    ));
+  };
+
+  return (
+    <div className="faq-section cursor-pointer">
+      <div className="faq-section-upper">
+        <h1>Frequently Asked Questions</h1>
+        <div className="flex items-center">
+          <button className="px-5 py-2">Contact Us</button>
         </div>
       </div>
-    </>
+      <div className="faq-section-lower">
+        <div className="faq-section-lower-pt-1">
+          {splitQuestions(questions, 0, 3)}
+        </div>
+        <div className="faq-section-lower-pt-1">
+          {splitQuestions(questions, 3, 6)}
+        </div>
+      </div>
+    </div>
   );
 };
 

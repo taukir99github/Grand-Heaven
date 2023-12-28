@@ -1,4 +1,4 @@
-import Stepper from "../../PostProperty/Stepper/Stepper";
+import Stepper from "./Stepper/Stepper";
 import { Outlet } from "react-router-dom";
 
 function PostProperty() {

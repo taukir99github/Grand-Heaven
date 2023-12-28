@@ -1,12 +1,7 @@
 import Navbar from "./Components/Navbar/Navbar";
 import DashHome from "./Components/Dashboard/Dashboard Home/DasHome";
 import LoginSignup from "./Components/LogIn/LoginSignup";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import AdditionalDetails from "./Components/Dashboard/PostProperty/Additional Details/AdditionalDetails";
 import Aminities from "./Components/Dashboard/PostProperty/Aminities/Aminities";
 import PropertyDetails from "./Components/Dashboard/PostProperty/PropertyDetails/PropertyDetails";
@@ -14,12 +9,12 @@ import PostProperty from "./Components/Dashboard/Dashboard Home/Sidebar Componen
 import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import PropertyDetailsPage from "./Components/PropertyDetailsPage/PropertyDetailsPage";
+import Properties from "./Components/Properties/Properties";
+
 const App = () => {
   return (
     <div>
       <Navbar />
-
-      {/* Dashboard  */}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -33,8 +28,9 @@ const App = () => {
         </Route>
         <Route path="LogInSignUp" element={<LoginSignup />} />
         <Route path="PropertyDetailsPage" element={<PropertyDetailsPage />} />
+        <Route path="Properties" element={<Properties />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

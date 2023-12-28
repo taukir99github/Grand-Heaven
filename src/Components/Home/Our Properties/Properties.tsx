@@ -1,7 +1,5 @@
 import React from "react";
 import "./Properties.css";
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
 import { CiLocationOn } from "react-icons/ci";
 import icons1 from "../../../Images/icons1.png";
 import icons2 from "../../../Images/icons2.png";

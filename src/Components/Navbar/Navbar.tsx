@@ -22,7 +22,9 @@ const Navbar = () => {
            </Link>
           </div>
           <div className="transition ease-in-out delay-250 hover:-translate-y-2 hover:scale-110 hover:text-red-500 duration-300 ...">
+            <Link to={'/properties'}>
             Properties
+            </Link>
           </div>
           <div className="transition ease-in-out delay-250 hover:-translate-y-2 hover:scale-110 hover:text-red-500 duration-300 ...">
             Agents

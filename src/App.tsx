@@ -5,12 +5,14 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import AdditionalDetails from "./Components/Dashboard/PostProperty/Additional Details/AdditionalDetails";
 import Aminities from "./Components/Dashboard/PostProperty/Aminities/Aminities";
 import PropertyDetails from "./Components/Dashboard/PostProperty/PropertyDetails/PropertyDetails";
-import PostProperty from "./Components/Dashboard/Dashboard Home/Sidebar Components/PostProperty";
+import PostProperty from "./Components/Dashboard/PostProperty/PostProperty";
 import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import PropertyDetailsPage from "./Components/PropertyDetailsPage/PropertyDetailsPage";
 import Properties from "./Components/Properties/Properties";
 
+import Profile from "./Components/Dashboard/Profile/Profile";
+import MyListing from "./Components/Dashboard/My Listings/MyListing";
 const App = () => {
   return (
     <div>
@@ -25,8 +27,10 @@ const App = () => {
             <Route path="aminities" element={<Aminities />} />
             <Route index element={<Navigate to="property-details" replace />} />
           </Route>
+          <Route path="profile" element={<Profile/>}/>
+          <Route path="MyListing" element={<MyListing/>}/>
         </Route>
-        <Route path="LogInSignUp" element={<LoginSignup />} />
+        <Route path="LogIn" element={<LoginSignup />} />
         <Route path="PropertyDetailsPage" element={<PropertyDetailsPage />} />
         <Route path="Properties" element={<Properties />} />
       </Routes>

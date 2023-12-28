@@ -4,6 +4,7 @@ import { CiLocationOn } from "react-icons/ci";
 import icons1 from "../../../Images/icons1.png";
 import icons2 from "../../../Images/icons2.png";
 import Property1 from "../../../Images/Property1.png";
+import { Link } from "react-router-dom";
 
 const Properties: React.FC = () => {
   return (
@@ -30,7 +31,9 @@ const Properties: React.FC = () => {
             </div>
             <p>$2000000</p>
             <div>
+              <Link to="/PropertyDetailsPage">
               <button>view</button>
+              </Link>
             </div>
           </div>
         </div>

@@ -154,7 +154,7 @@ const Home: React.FC = () => {
           <Carousel
             swipeable={false}
             draggable={false}
-            showDots={true}
+            // showDots={true}
             responsive={responsive}
             ssr={true} // means to render carousel on server-side.
             infinite={true}

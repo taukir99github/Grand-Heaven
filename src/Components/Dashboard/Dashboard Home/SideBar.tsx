@@ -13,7 +13,7 @@ const SideBar: React.FC = () => {
   const sidebarMenu = [
     {
       id: 1,
-      path: "/dashboard/profile-page",
+      path: "/dashboard/profile",
       image: Profile,
       text: "Profile",
     },
@@ -31,7 +31,7 @@ const SideBar: React.FC = () => {
     },
     {
       id: 4,
-      path: "/dashboard/my-listings",
+      path: "/dashboard/MyListing",
       image: Listings,
       text: "My Listings",
     },
@@ -39,7 +39,7 @@ const SideBar: React.FC = () => {
       id: 5,
       path: "/dashboard/rent",
       image: Rent,
-      text: "Profile",
+      text: "Rent Agreements",
     },
     {
       id: 6,
@@ -47,12 +47,7 @@ const SideBar: React.FC = () => {
       image: Logout,
       text: "Logout",
     },
-    {
-      id: 7,
-      path: "/dashboard",
-      image: Profile,
-      text: "Profile",
-    },
+  
   ];
 
   const [sideMenu, setSideMenu] = useState(false);

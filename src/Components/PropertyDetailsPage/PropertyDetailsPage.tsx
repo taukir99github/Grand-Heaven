@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import property1 from "../../Images/propertyimg1.jpg";
 import property2 from "../../Images/propertyimg2.jpg";
 import property3 from "../../Images/propertyimg3.jpg";
@@ -6,8 +6,15 @@ import property4 from "../../Images/propertyimh4.jpg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { GoArrowRight } from "react-icons/go";
+import Properties from "../Home/Our Properties/Properties";
+import { IoMdPhotos } from "react-icons/io";
+import { BiSolidVideos } from "react-icons/bi";
+import GetInTouchForm from "./GetInTouchForm";
 
 const PropertyDetailsPage = () => {
+
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -25,6 +32,25 @@ const PropertyDetailsPage = () => {
       slidesToSlide: 1,
     },
   };
+
+  const Similiarresponsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+      slidesToSlide: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+      slidesToSlide: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 2,
+      slidesToSlide: 1,
+    },
+  };
+
   return (
     <div>
       <div className="overflow-hidden">
@@ -77,14 +103,22 @@ const PropertyDetailsPage = () => {
             <h1>Dubai, United Arab Emirates</h1>
           </div>
           <div className="cursor-pointer relative">
-            <div className="text-[18px] relative z-10 group">
-              <a
-                href="#"
-                className="text-black no-underline group-hover:text-black"
-              >
-                See all Photos & videos
-                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-black origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-              </a>
+            <div className="text-[18px] flex flex-col gap-4">
+              See all Photos & videos
+              <div className="flex gap-3">
+                <div className="flex gap-3 items-center border-2 px-4 py-2 justify-center rounded-lg">
+                  <span className="text-[20px]">
+                    <IoMdPhotos />
+                  </span>
+                  <p>Photos</p>
+                </div>
+                <div className="flex gap-3 items-center border-2 px-4 justify-center rounded-lg">
+                  <span className="text-[20px]">
+                    <BiSolidVideos />
+                  </span>
+                  <p>Videos</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -92,7 +126,7 @@ const PropertyDetailsPage = () => {
           <hr />
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <div className="flex gap-24 justify-center ">
             <div className="flex flex-col gap-3">
               <span className="font-semibold">PRICE</span>
@@ -112,11 +146,11 @@ const PropertyDetailsPage = () => {
             </div>
           </div>
           <div>
-            <div className="w-[400px] h-[200px] bg-slate-800">
+            <div className="w-[400px] h-auto px-[0px] py-[15px] bg-slate-800">
               <div className="flex flex-col text-white justify-center items-center gap-4">
                 <span className="text-[28px] mt-4">Akshay neje</span>
-                <div className="flex items-center gap-2">
-                  <span>Send message</span>
+                <div className="flex items-center gap-2 cursor-pointer">
+                  <span onClick={() => setIsOpen(!isOpen)}>Send message</span>
                   <span className="font-medium text-xl">
                     <GoArrowRight />
                   </span>
@@ -126,6 +160,122 @@ const PropertyDetailsPage = () => {
           </div>
         </div>
 
+        <div className="w-[100%] mt-10">
+          <div className="flex justify-center items-center">
+            <span className="text-[34px]">Amenities & Features</span>
+          </div>
+          <div className="flex justify-around py-8 mt-8">
+            <div className="flex flex-col gap-4 w-[20%]">
+              <span className="text-[18px] font-semibold">Listing Details</span>
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Property ID</p>
+                  </div>
+                  <div>#123</div>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Property Type</p>
+                  </div>
+                  <div>Single Family Homes</div>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">City</p>
+                  </div>
+                  <div>Banglore</div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 w-[25%]">
+              <span className="text-[18px] font-semibold">
+                Utilities & Building
+              </span>
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Year Built</p>
+                  </div>
+                  <div>2000</div>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Lot Size Unit</p>
+                  </div>
+                  <div>Acre(s)</div>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Lot Size</p>
+                  </div>
+                  <div>7.76</div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Parking</p>
+                  </div>
+                  <div>Garage</div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 w-[20%]">
+              <span className="text-[18px] font-semibold">Interior</span>
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Amenities</p>
+                  </div>
+                  <div>
+                    Balcony, Doorman, Tennis Court, Tile Flooring, walk-in
+                    closet, Gardens, In-Home Fitness Center, Terrace / Outdoor
+                    Space, Outdoor Pool, 1 Fireplace
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Bathrooms</p>
+                  </div>
+                  <div>7</div>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Bedroom</p>
+                  </div>
+                  <div>6</div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Balcony</p>
+                  </div>
+                  <div>3</div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 w-[20%]">
+              <span className="text-[18px] font-semibold">
+                Additional Features
+              </span>
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-lg">Features</p>
+                  </div>
+                  <div>
+                    Mountain Views, Water View, Eco-friendly, Deep Water
+                    Mooring, Scenic View
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="flex justify-between">
           <div className="w-[50%] flex flex-col gap-4">
             <h1 className="text-[30px]">Descriptions</h1>
@@ -165,9 +315,32 @@ const PropertyDetailsPage = () => {
             ></iframe>
           </div>
         </div>
-      </div>
-      <div>
-        <hr />
+
+        <div className="flex flex-col gap-8 pb-5">
+          <div className="text-[30px]">Similiar Property</div>
+          <div className="">
+            <Carousel
+              swipeable={false}
+              draggable={false}
+              // showDots={true}
+              responsive={Similiarresponsive}
+              ssr={true}
+              infinite={true}
+              // autoPlay={true}
+              autoPlaySpeed={3000}
+              customTransition="transform 2000ms ease-in-out"
+              transitionDuration={500}
+            >
+              <Properties />
+              <Properties />
+              <Properties />
+              <Properties />
+            </Carousel>
+          </div>
+        </div>
+        <div>
+          <GetInTouchForm isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
       </div>
     </div>
   );

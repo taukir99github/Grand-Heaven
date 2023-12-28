@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="nav-pt-3 flex gap-8">
         
           <button className="signup transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 ...">
-            <Link to="/LogInSignUp">
+            <Link to="/LogIn">
             LogIn
             </Link>
           </button>

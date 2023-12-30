@@ -147,7 +147,7 @@ function Aminities() {
             {/* Defining Location */}
             <div className="flex flex-col gap-5 mt-9">
               <span className="text-lg font-semibold">1.Define Location</span>
-              <div className="flex gap-4 text-center ">
+              <div className="flex flex-wrap gap-4 text-center ">
                 {details["Define Location"].map((item) => (
                   <div
                     key={item}
@@ -167,11 +167,11 @@ function Aminities() {
             {/* Explaing Price */}
             <div className="flex flex-col gap-5 mt-9">
               <span className="text-lg font-semibold">2.Explaning Price</span>
-              <div className="flex gap-4 text-center ">
+              <div className="flex flex-wrap gap-4 text-center ">
                 {details["Explaining Price"].map((item) => (
                   <div
                     key={item}
-                    className={`flex p-2 px-6 border-2 ${
+                    className={`flex flex-wrap p-2 px-6 border-2 ${
                       item === aminitiesDetails["Explaining Price"]
                         ? "bg-black text-white"
                         : "hover:bg-stone-100"
@@ -211,7 +211,7 @@ function Aminities() {
               <span className="text-lg font-semibold">
                 2.Defining Size & Structure
               </span>
-              <div className="flex gap-4 text-center ">
+              <div className="flex flex-wrap gap-4 text-center ">
                 {details["Defining Size & Structure"].map((item) => (
                   <div
                     key={item}

@@ -10,6 +10,8 @@ import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import PropertyDetailsPage from "./Components/PropertyDetailsPage/PropertyDetailsPage";
 import Properties from "./Components/Properties/Properties";
+import Agents from "./Components/Agents/Agents";
+import PageNotFound from "./PageNotFound/PageNotFound";
 
 import Profile from "./Components/Dashboard/Profile/Profile";
 import MyListing from "./Components/Dashboard/My Listings/MyListing";
@@ -27,14 +29,18 @@ const App = () => {
             <Route path="aminities" element={<Aminities />} />
             <Route index element={<Navigate to="property-details" replace />} />
           </Route>
-          <Route path="profile" element={<Profile/>}/>
-          <Route path="MyListing" element={<MyListing/>}/>
+          <Route path="profile" element={<Profile />} />
+          <Route index element={<Navigate to="profile" replace />} />
+          <Route path="MyListing" element={<MyListing />} />
         </Route>
         <Route path="LogIn" element={<LoginSignup />} />
         <Route path="PropertyDetailsPage" element={<PropertyDetailsPage />} />
         <Route path="Properties" element={<Properties />} />
+        <Route path="Agents" element={<Agents />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
+      
     </div>
   );
 };

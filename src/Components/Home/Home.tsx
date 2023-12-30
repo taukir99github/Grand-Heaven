@@ -16,6 +16,7 @@ import Homeimage from "../../Images/HomeLeft Img.png";
 import vector1 from "../../Images/vectorIcon1.png";
 import vector2 from "../../Images/vectoeIcon2.png";
 import vector3 from "../../Images/vectoeIcon3.png";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   interface SearchMenu {
@@ -145,8 +146,9 @@ const Home: React.FC = () => {
       <div className="flex flex-col gap-7 ">
         <div className="font-bold text-2xl w-100 flex justify-between px-16 mb-4 ">
           <h1>Explore Our Properties</h1>
-          <div className="flex gap-2 cursor-pointer">
-            <span className="font-light text-base ">View all categories </span>
+          <div className="flex gap-2 cursor-pointer items-center">
+          <Link to="/Properties">
+            <span className="font-light text-base ">View all categories </span></Link>
             <GoArrowRight />
           </div>
         </div>

@@ -3,7 +3,7 @@ import neje from "../../../Images/akhsay.jpeg";
 
 const Profile = () => {
   return (
-    <div className="w-[100%] flex flex-col">
+    <div className="w-[100%] flex flex-col mt-[3rem]">
       <div className="flex gap-12 justify-start items-center p-8">
         <div className="w-[200px] h-[200px] bg-gray-400 rounded-[50%]">
           <img

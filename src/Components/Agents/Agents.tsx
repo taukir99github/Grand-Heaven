@@ -3,7 +3,7 @@ import AgentsCard from "./AgentsCard";
 
 const Agents = () => {
   return (
-    <div className="flex flex-col gap-10 mt-4">
+    <div className="flex flex-col gap-10 mt-[6rem]">
       <div className="w-full flex justify-center">
         <div className="w-[70%] h-[70px] bg-white rounded-lg flex justify-center items-center shadow-xl space-y-4">
           <div className="flex gap-8">

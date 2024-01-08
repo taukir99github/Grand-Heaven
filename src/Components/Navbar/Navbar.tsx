@@ -6,6 +6,7 @@ import LoginSignup from "../LogIn/LoginSignup";
 import { RxAvatar } from "react-icons/rx";
 import { Dropdown } from "flowbite-react";
 import { HiCog, HiCurrencyDollar, HiLogout, HiViewGrid } from "react-icons/hi";
+
 const Navbar = () => {
   const icon = (
     <div className="flex gap-2 items-center">
@@ -14,7 +15,7 @@ const Navbar = () => {
   );
   return (
     <div>
-      <nav>
+      <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="nav-pt-1">
           <Link to="/">
             <img src={Navlogo} alt="" />
@@ -39,9 +40,9 @@ const Navbar = () => {
         <div className="nav-pt-3 flex gap-8">
           <Dropdown label={icon} style={{ color: "black" }}>
             <Dropdown.Header>
-              <span className="block text-sm text-black">Bonnie Green</span>
+              <span className="block text-sm text-black">Md Taukir</span>
               <span className="block truncate text-sm font-medium">
-                bonnie@flowbite.com
+                abc@gmail.com
               </span>
             </Dropdown.Header>
             <Dropdown.Item icon={HiViewGrid}>

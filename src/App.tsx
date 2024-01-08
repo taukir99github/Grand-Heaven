@@ -12,7 +12,7 @@ import PropertyDetailsPage from "./Components/PropertyDetailsPage/PropertyDetail
 import Properties from "./Components/Properties/Properties";
 import Agents from "./Components/Agents/Agents";
 import PageNotFound from "./PageNotFound/PageNotFound";
-
+import ViewDetails from "./Components/Agents/ViewDetails/ViewDetails";
 import Profile from "./Components/Dashboard/Profile/Profile";
 import MyListing from "./Components/Dashboard/My Listings/MyListing";
 const App = () => {
@@ -37,10 +37,10 @@ const App = () => {
         <Route path="PropertyDetailsPage" element={<PropertyDetailsPage />} />
         <Route path="Properties" element={<Properties />} />
         <Route path="Agents" element={<Agents />} />
+        <Route path="ViewDetails" element={<ViewDetails />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
-      
     </div>
   );
 };

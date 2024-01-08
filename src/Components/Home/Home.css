@@ -23,13 +23,13 @@
 }
 
 .Home-text-content h1 {
-  font-size: 25px;
+  font-size: 29px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .Home-text-content p {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   margin: 0;
 }
@@ -51,7 +51,7 @@
   justify-content: center;
 }
 .Home-dropdown-section-pt-2 {
-  padding: 16px 19px;
+  padding: 8px 19px;
   color: black;
   background-color: #fff;
 }

@@ -56,7 +56,7 @@ const SideBar: React.FC = () => {
   console.log(location.pathname.split('/'), sidebarMenu[0].path.split('/'));
 
   return (
-    <div className="cursor-pointer bg-white flex flex-col gap-6 p-3 h-max rounded-lg">
+    <div className="cursor-pointer bg-white flex flex-col gap-6 p-3 h-max rounded-lg sticky top-0 mt-[3rem]">
       {sideMenu ? (
         <RxCross2 onClick={() => setSideMenu(!sideMenu)} className="text-[30px]" />
       ) : (

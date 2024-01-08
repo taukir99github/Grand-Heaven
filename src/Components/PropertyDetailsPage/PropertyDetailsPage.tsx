@@ -327,9 +327,9 @@ const PropertyDetailsPage = () => {
               ssr={true}
               infinite={true}
               // autoPlay={true}
-              autoPlaySpeed={3000}
-              customTransition="transform 2000ms ease-in-out"
-              transitionDuration={500}
+              // autoPlaySpeed={3000}
+              // customTransition="transform 2000ms ease-in-out"
+              // transitionDuration={500}
             >
               <Properties />
               <Properties />

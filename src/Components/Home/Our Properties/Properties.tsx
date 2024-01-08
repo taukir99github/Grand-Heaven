@@ -32,7 +32,7 @@ const Properties: React.FC = () => {
             <p>$2000000</p>
             <div>
               <Link to="/PropertyDetailsPage">
-              <button>view</button>
+                <button>view</button>
               </Link>
             </div>
           </div>

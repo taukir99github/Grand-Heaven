@@ -4,6 +4,8 @@ import { CiLocationOn } from "react-icons/ci";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
+import { IoEyeOutline } from "react-icons/io5";
+
 const MyListingCard = () => {
   const [showOptions, setShowOptions] = useState(false);
 
@@ -20,28 +22,35 @@ const MyListingCard = () => {
         <div className="flex justify-between items-center">
           <div className="flex flex-col">
             <span className="text-[18px]">Property Name</span>
-            <div className="flex items-center gap-3 text-[16px]">
-              <span>
-                <CiLocationOn />
-              </span>
-              <span>Address</span>
+            <div className="flex gap-8 ">
+              <div className="flex items-center gap-3 text-[16px]">
+                <span>
+                  <CiLocationOn />
+                </span>
+                <span>Address</span>
+              </div>
+              <div className="flex gap-2 items-center justify-center">
+                <div>
+                  <IoEyeOutline />
+                </div>
+                <span>102</span>
+              </div>
             </div>
           </div>
           <div className="flex justify-between">
             <div className="relative">
               <div
-                className="px-6 py-2  rounded-lg text-[20px] cursor-pointer"
+                className="px-6 py-2  rounded-lg text-[24px] cursor-pointer"
                 onClick={toggleOptions}
               >
                 <BsThreeDotsVertical />
               </div>
               {showOptions && (
-                <div className="absolute right-0 mt-2 w-46 bg-white border border-gray-200 rounded-md shadow-lg py-1">
-              
+                <div className="absolute right-0 mt-2 w-46 bg-white border border-gray-200 rounded-md shadow-lg py-1 cursor-pointer">
                   <div className="bg-transparent hover:bg-blue-500  font-medium hover:text-white py-2 px-4 hover:border-transparent rounded">
                     Edit
                   </div>
-                  
+
                   <div className="bg-transparent hover:bg-blue-500  font-medium hover:text-white py-2 px-4 hover:border-transparent rounded">
                     Delete
                   </div>

@@ -16,7 +16,7 @@ const GetInTouchForm: React.FC<GetInTouchFormProps> = ({isOpen,setIsOpen}) => {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center">
+        <div className="fixed inset-0 flex items-center justify-center mt-[3rem]">
           <div className="w-[450px] h-auto bg-gray-200 shadow-lg rounded-lg p-4 ">
             <div className="w-[100%] flex justify-between items-center">
               <span className="text-[28px]">Get In Touch</span>

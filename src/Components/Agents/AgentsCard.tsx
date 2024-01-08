@@ -2,6 +2,7 @@ import React from "react";
 import { CiStar } from "react-icons/ci";
 import neje from "../../Images/akhsay.jpeg";
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const AgentsCard = () => {
   return (
@@ -11,9 +12,11 @@ const AgentsCard = () => {
           <div className="w-[150px] h-[150px] bg-gray-400">
             <img src={neje} alt="" className="w-full h-full" />
           </div>
-          <div className="text-center transition ease-in-out delay-250 hover:-translate-y-2 hover:scale-110 hover:text-red-500 duration-300 cursor-pointer">
+          <Link to={"/ViewDetails"}>
+          <div className="text-center cursor-pointer hover:underline">
             view Profile
           </div>
+          </Link>
         </div>
         <div className="flex gap-20">
           <div className="flex flex-col gap-2 ">

@@ -5,8 +5,10 @@ function FilterationDash() {
   const [value, setValue] = React.useState([20, 37]);
 
   return (
-    <div className="bg-white h-auto flex flex-col gap-7 p-4 shadow-2xl rounded-xl">
-      <div className="text-center font-semibold text-[24px] tracking-wide">Filters</div>
+    <div className="bg-white h-auto max-h-screen overflow-y-auto flex flex-col gap-7 p-4 shadow-2xl rounded-xl sticky top-0">
+      <div className="text-center font-semibold text-[24px] tracking-wide">
+        Filters
+      </div>
 
       {/* Property Type */}
       <div className="flex flex-col gap-4">
@@ -31,7 +33,10 @@ function FilterationDash() {
         <span className="text-[17px] font-semibold">BHK</span>
         <div className="flex gap-4 flex-wrap cursor-pointer ">
           {["1BHK", "2BHK", "3BHK", "4BHK+"].map((item) => (
-            <div className="p-2 border-2 text-center text-[14px] rounded-lg shadow-sm" key={item}>
+            <div
+              className="p-2 border-2 text-center text-[14px] rounded-lg shadow-sm"
+              key={item}
+            >
               {item}
             </div>
           ))}
@@ -43,7 +48,10 @@ function FilterationDash() {
         <span className="text-[17px] font-semibold">Furnishing</span>
         <div className="flex flex-wrap gap-4 cursor-pointer">
           {["Furnished", "Semi-Furnished", "UnFurnished"].map((item) => (
-            <div className="p-2 border-2 text-center text-[14px] rounded-lg shadow-sm" key={item}>
+            <div
+              className="p-2 border-2 text-center text-[14px] rounded-lg shadow-sm"
+              key={item}
+            >
               {item}
             </div>
           ))}
